@@ -21,7 +21,7 @@ require("lazy").setup({
       "LazyVim/LazyVim",
       import = "lazyvim.plugins",
       opts = {
-        colorscheme = "github_dark_default",
+        colorscheme = "github_dark_high_contrast",
       },
     },
     -- import/override with your plugins
