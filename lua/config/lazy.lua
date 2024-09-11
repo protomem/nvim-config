@@ -24,6 +24,23 @@ require("lazy").setup({
         colorscheme = "github_dark_high_contrast",
       },
     },
+
+    { import = "lazyvim.plugins.extras.coding.yanky" },
+    { import = "lazyvim.plugins.extras.editor.outline" },
+
+    { import = "lazyvim.plugins.extras.coding.luasnip" },
+    { import = "lazyvim.plugins.extras.lsp.none-ls" },
+
+    { import = "lazyvim.plugins.extras.coding.codeium" },
+
+    { import = "lazyvim.plugins.extras.lang.clangd" },
+    { import = "lazyvim.plugins.extras.lang.go" },
+    { import = "lazyvim.plugins.extras.lang.typescript" },
+    { import = "lazyvim.plugins.extras.lang.markdown" },
+    { import = "lazyvim.plugins.extras.lang.sql" },
+    { import = "lazyvim.plugins.extras.lang.yaml" },
+    { import = "lazyvim.plugins.extras.lang.json" },
+
     -- import/override with your plugins
     { import = "plugins" },
   },
