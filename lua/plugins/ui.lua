@@ -29,6 +29,8 @@ return {
     "nvim-lualine/lualine.nvim",
     opts = function(_, opts)
       local LazyVim = require("lazyvim.util")
+      opts.options.component_separators = { left = "", right = "" }
+      opts.options.section_separators = { left = "", right = "" }
       opts.sections.lualine_c[4] = {
         LazyVim.lualine.pretty_path({
           length = 0,

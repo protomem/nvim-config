@@ -1,12 +1,18 @@
 return {
-  "projekt0n/github-nvim-theme",
-  lazy = false, -- make sure we load this during startup if it is your main colorscheme
-  priority = 1000, -- make sure to load this before all the other start plugins
+  "0xstepit/flow.nvim",
+  lazy = false,
+  priority = 1000,
+  opts = {},
   config = function()
-    require("github-theme").setup({
-      -- ...
+    require("flow").setup({
+      dark_theme = true,
+      transparent = false,
+      high_contrast = false,
+      fluo_color = "pink",
+      mode = "desaturate",
+      aggressive_spell = false,
     })
 
-    -- vim.cmd("colorscheme github_dark")
+    vim.cmd("colorscheme flow")
   end,
 }

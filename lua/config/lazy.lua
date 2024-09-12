@@ -20,9 +20,6 @@ require("lazy").setup({
     {
       "LazyVim/LazyVim",
       import = "lazyvim.plugins",
-      opts = {
-        colorscheme = "github_dark_high_contrast",
-      },
     },
 
     { import = "lazyvim.plugins.extras.coding.yanky" },
