@@ -6,7 +6,7 @@ return {
   config = function()
     require("flow").setup({
       dark_theme = true,
-      transparent = true,
+      transparent = false,
       high_contrast = false,
       fluo_color = "pink",
       mode = "desaturate",
