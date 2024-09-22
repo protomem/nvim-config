@@ -13,6 +13,10 @@ return {
       aggressive_spell = false,
     })
 
-    vim.cmd("colorscheme flow")
+    vim.cmd([[
+      set background=dark
+      set termguicolors
+      colorscheme flow
+    ]])
   end,
 }
