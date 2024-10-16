@@ -18,6 +18,13 @@ return {
   },
 
   {
+    "nvim-neo-tree/neo-tree.nvim",
+    opts = function(_, opts)
+      opts.window.width = 30
+    end,
+  },
+
+  {
     "telescope.nvim",
     dependencies = {
       "nvim-telescope/telescope-file-browser.nvim",
