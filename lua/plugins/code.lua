@@ -63,7 +63,11 @@ return {
         end,
 
         sources = {
+          -- Lua
           nls.builtins.formatting.stylua,
+
+          -- C/C++
+          nls.builtins.formatting.clang_format,
         },
       })
     end,
