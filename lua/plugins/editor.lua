@@ -9,10 +9,10 @@ return {
       "TmuxNavigatePrevious",
     },
     keys = {
-      { "<c-h>",  "<cmd><C-U>TmuxNavigateLeft<cr>" },
-      { "<c-j>",  "<cmd><C-U>TmuxNavigateDown<cr>" },
-      { "<c-k>",  "<cmd><C-U>TmuxNavigateUp<cr>" },
-      { "<c-l>",  "<cmd><C-U>TmuxNavigateRight<cr>" },
+      { "<c-h>", "<cmd><C-U>TmuxNavigateLeft<cr>" },
+      { "<c-j>", "<cmd><C-U>TmuxNavigateDown<cr>" },
+      { "<c-k>", "<cmd><C-U>TmuxNavigateUp<cr>" },
+      { "<c-l>", "<cmd><C-U>TmuxNavigateRight<cr>" },
       { "<c-\\>", "<cmd><C-U>TmuxNavigatePrevious<cr>" },
     },
   },
@@ -36,6 +36,27 @@ return {
           require("which-key").show({ global = false })
         end,
         desc = "Buffer Local Keymaps (which-key)",
+      },
+    },
+  },
+
+  {
+    "hedyhli/outline.nvim",
+    cmd = { "Outline", "OutlineOpen" },
+    lazy = true,
+    config = function()
+      require("outline").setup({
+        outline_window = {
+          width = 30,
+          auto_jump = true,
+        },
+      })
+    end,
+    keys = {
+      {
+        "<leader>o",
+        "<cmd>Outline<CR>",
+        desc = "Toggle Outline",
       },
     },
   },
@@ -133,8 +154,7 @@ return {
             -- additional_args = { "--hidden" },
           })
         end,
-        desc =
-        "Search for a string in your current working directory and get results live as you type, respects .gitignore",
+        desc = "Search for a string in your current working directory and get results live as you type, respects .gitignore",
       },
       {
         "\\\\",
