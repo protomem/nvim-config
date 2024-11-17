@@ -62,6 +62,14 @@ return {
   },
 
   {
+    "ggandor/leap.nvim",
+    dependencies = { "tpope/vim-repeat" },
+    config = function()
+      require("leap").create_default_mappings()
+    end,
+  },
+
+  {
     "nvim-telescope/telescope.nvim",
     tag = "0.1.8",
     dependencies = {
@@ -109,12 +117,12 @@ return {
                 vim.cmd("startinsert")
               end,
               ["<C-u>"] = function(prompt_bufnr)
-                for i = 1, 10 do
+                for _ = 1, 10 do
                   actions.move_selection_previous(prompt_bufnr)
                 end
               end,
               ["<C-d>"] = function(prompt_bufnr)
-                for i = 1, 10 do
+                for _ = 1, 10 do
                   actions.move_selection_next(prompt_bufnr)
                 end
               end,
