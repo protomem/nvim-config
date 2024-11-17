@@ -56,9 +56,19 @@ return {
 
       local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 
+      local exclude_filename = { "premake5.lua" }
+      local function is_excluded(filename)
+        for _, v in pairs(exclude_filename) do
+          if filename == v then
+            return true
+          end
+        end
+      end
+
       nls.setup({
         on_attach = function(client, bufnr)
-          if client.supports_method("textDocument/formatting") then
+          local bufname = vim.fn.expand("%")
+          if client.supports_method("textDocument/formatting") and not is_excluded(bufname) then
             vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
             vim.api.nvim_create_autocmd("BufWritePre", {
               group = augroup,
