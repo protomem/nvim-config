@@ -84,6 +84,10 @@ return {
 
           -- C/C++
           nls.builtins.formatting.clang_format,
+
+          -- Go
+          nls.builtins.formatting.gofumpt,
+          nls.builtins.diagnostics.staticcheck,
         },
       })
     end,
