@@ -17,17 +17,8 @@ return {
     },
   },
 
-  -- {
-  --   "echasnovski/mini.starter",
-  --   version = "*",
-  --   config = function()
-  --     require("mini.starter").setup()
-  --   end,
-  -- },
-
   {
     "goolord/alpha-nvim",
-    -- dependencies = { "echasnovski/mini.icons" },
     config = function()
       require("alpha").setup(require("alpha.themes.startify").config)
     end,
