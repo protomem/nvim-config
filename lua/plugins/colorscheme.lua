@@ -1,9 +1,9 @@
 return {
-  "bluz71/vim-moonfly-colors",
-  name = "moonfly",
+  "kepano/flexoki-neovim",
+  name = "flexoki",
   lazy = false,
   priority = 1000,
   config = function()
-    vim.cmd("colorscheme moonfly")
+    vim.cmd("colorscheme flexoki-dark")
   end,
 }
