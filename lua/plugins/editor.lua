@@ -9,19 +9,27 @@ return {
       "TmuxNavigatePrevious",
     },
     keys = {
-      { "<c-h>", "<cmd><C-U>TmuxNavigateLeft<cr>" },
-      { "<c-j>", "<cmd><C-U>TmuxNavigateDown<cr>" },
-      { "<c-k>", "<cmd><C-U>TmuxNavigateUp<cr>" },
-      { "<c-l>", "<cmd><C-U>TmuxNavigateRight<cr>" },
+      { "<c-h>",  "<cmd><C-U>TmuxNavigateLeft<cr>" },
+      { "<c-j>",  "<cmd><C-U>TmuxNavigateDown<cr>" },
+      { "<c-k>",  "<cmd><C-U>TmuxNavigateUp<cr>" },
+      { "<c-l>",  "<cmd><C-U>TmuxNavigateRight<cr>" },
       { "<c-\\>", "<cmd><C-U>TmuxNavigatePrevious<cr>" },
     },
   },
 
+  -- {
+  --   "echasnovski/mini.starter",
+  --   version = "*",
+  --   config = function()
+  --     require("mini.starter").setup()
+  --   end,
+  -- },
+
   {
-    "echasnovski/mini.starter",
-    version = "*",
+    "goolord/alpha-nvim",
+    -- dependencies = { "echasnovski/mini.icons" },
     config = function()
-      require("mini.starter").setup()
+      require("alpha").setup(require("alpha.themes.startify").config)
     end,
   },
 
@@ -162,7 +170,8 @@ return {
             -- additional_args = { "--hidden" },
           })
         end,
-        desc = "Search for a string in your current working directory and get results live as you type, respects .gitignore",
+        desc =
+        "Search for a string in your current working directory and get results live as you type, respects .gitignore",
       },
       {
         "\\\\",
