@@ -39,9 +39,16 @@ return {
   },
 
   {
-    "lukas-reineke/indent-blankline.nvim",
-    main = "ibl",
-    opts = {},
+    "echasnovski/mini.indentscope",
+    version = "*",
+    config = function()
+      require("mini.indentscope").setup({
+        draw = {
+          delay = 60,
+        },
+        symbol = "┆",
+      })
+    end,
   },
 
   {
