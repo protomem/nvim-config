@@ -3,9 +3,11 @@ return {
   lazy = false,
   priority = 1000,
   opts = {
+    style = "night",
     transparent = true,
   },
-  config = function()
-    vim.cmd([[colorscheme tokyonight-night]])
+  config = function(_, opts)
+    require("tokyonight").setup(opts)
+    vim.cmd([[colorscheme tokyonight]])
   end,
 }
