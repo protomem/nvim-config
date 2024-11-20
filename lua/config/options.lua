@@ -24,17 +24,18 @@ vim.opt.smarttab = true
 vim.opt.breakindent = true
 vim.opt.shiftwidth = 4
 vim.opt.tabstop = 4
-vim.opt.wrap = false          -- No Wrap lines
+vim.opt.wrap = false -- No Wrap lines
 vim.opt.backspace = { "start", "eol", "indent" }
 vim.opt.path:append({ "**" }) -- Finding files - Search down into subfolders
 vim.opt.wildignore:append({ "*/node_modules/*" })
-vim.opt.splitbelow = true     -- Put new windows below current
-vim.opt.splitright = true     -- Put new windows right of current
+vim.opt.splitbelow = true -- Put new windows below current
+vim.opt.splitright = true -- Put new windows right of current
 vim.opt.splitkeep = "cursor"
 vim.opt.mouse = ""
 vim.opt.clipboard = "unnamedplus"
 
-vim.opt.termguicolors = true
+vim.o.termguicolors = true
+vim.o.background = "dark"
 
 -- Undercurl
 vim.cmd([[let &t_Cs = "\e[4:3m"]])

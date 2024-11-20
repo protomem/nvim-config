@@ -1,9 +1,13 @@
 return {
-  "kepano/flexoki-neovim",
-  name = "flexoki",
+  "sainnhe/gruvbox-material",
   lazy = false,
   priority = 1000,
   config = function()
-    vim.cmd("colorscheme flexoki-dark")
+    vim.cmd([[
+      let g:gruvbox_material_better_performance = 1
+      let g:gruvbox_material_background = 'hard'
+      let g:gruvbox_material_foreground = 'mix'
+      colorscheme gruvbox-material
+    ]])
   end,
 }
