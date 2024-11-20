@@ -46,7 +46,7 @@ return {
         draw = {
           delay = 60,
         },
-        symbol = "┆",
+        symbol = "▏",
       })
     end,
   },
