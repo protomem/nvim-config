@@ -1,13 +1,11 @@
 return {
-  "sainnhe/gruvbox-material",
+  "folke/tokyonight.nvim",
   lazy = false,
   priority = 1000,
+  opts = {
+    transparent = true,
+  },
   config = function()
-    vim.cmd([[
-      let g:gruvbox_material_better_performance = 1
-      let g:gruvbox_material_background = 'hard'
-      let g:gruvbox_material_foreground = 'mix'
-      colorscheme gruvbox-material
-    ]])
+    vim.cmd([[colorscheme tokyonight-night]])
   end,
 }
