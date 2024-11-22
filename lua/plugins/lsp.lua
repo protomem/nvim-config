@@ -47,11 +47,12 @@ return {
               globals = {
                 "vim",
                 "require",
+                "love",
               },
             },
             workspace = {
               -- Make the server aware of Neovim runtime files
-              library = vim.api.nvim_get_runtime_file("", true),
+              library = { "${addons}/love2d/module/library", table.unpack(vim.api.nvim_get_runtime_file("", true)) },
             },
             -- Do not send telemetry data containing a randomized but unique identifier
             telemetry = {

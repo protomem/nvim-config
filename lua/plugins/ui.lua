@@ -25,4 +25,15 @@ return {
       require("circles").setup()
     end,
   },
+
+  {
+    "j-hui/fidget.nvim",
+    opts = {
+      notification = {
+        window = {
+          winblend = 0,
+        },
+      },
+    },
+  },
 }
