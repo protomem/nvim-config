@@ -107,6 +107,10 @@ return {
         },
       })
 
+      -- lspconfig.erlang_ls.setup({
+      --   capabilities = capabilities,
+      -- })
+
       local cmp = require("cmp")
       local luasnip = require("luasnip")
 

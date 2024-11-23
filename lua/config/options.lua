@@ -34,8 +34,8 @@ vim.opt.splitkeep = "cursor"
 vim.opt.mouse = ""
 vim.opt.clipboard = "unnamedplus"
 
-vim.o.termguicolors = true
-vim.o.background = "dark"
+vim.opt.termguicolors = true
+vim.opt.background = "dark"
 
 -- Undercurl
 vim.cmd([[let &t_Cs = "\e[4:3m"]])
