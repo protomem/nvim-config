@@ -4,7 +4,6 @@ return {
     build = ":TSUpdate",
     opts = {
       ensure_installed = {
-        "c",
         "lua",
         "vim",
         "vimdoc",
@@ -20,9 +19,14 @@ return {
         "gomod",
         "gowork",
         "gosum",
+
+        "c",
         "cpp",
         "cmake",
         "make",
+
+        "erlang",
+        "elixir",
       },
 
       highlight = { enable = true },

@@ -107,9 +107,9 @@ return {
         },
       })
 
-      -- lspconfig.erlang_ls.setup({
-      --   capabilities = capabilities,
-      -- })
+      lspconfig.erlangls.setup({
+        capabilities = capabilities,
+      })
 
       local cmp = require("cmp")
       local luasnip = require("luasnip")
@@ -122,7 +122,7 @@ return {
         },
         mapping = cmp.mapping.preset.insert({
           ["<C-u>"] = cmp.mapping.scroll_docs(-4), -- Up
-          ["<C-d>"] = cmp.mapping.scroll_docs(4), -- Down
+          ["<C-d>"] = cmp.mapping.scroll_docs(4),  -- Down
           -- C-b (back) C-f (forward) for snippet placeholder navigation.
           ["<C-Space>"] = cmp.mapping.complete(),
           ["<CR>"] = cmp.mapping.confirm({
